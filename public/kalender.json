@@ -1,0 +1,35 @@
+[
+{
+    "id": 3, 
+    "holdnavn": "Contemporary Teens",
+    "tilmeldingslink": "/contemporary-teens",
+    "tidspunkt": "17:00",
+    "dato":"Torsdag den 25",
+    "underviser": "Anne-Sofie Pi Østergaard",
+    "niveau": "Begynder / Letøvet",
+    "alder": "12-15 år",
+    "varighed": "60 min."
+},
+{
+    "id": 2, 
+    "holdnavn": "Dansefabrikken for børn",
+    "tilmeldingslink": "/dansefabrikken-for-børn",
+    "tidspunkt": "16:00",
+    "dato":"Torsdag den 25",
+    "underviser": "Ida Holm / Sofie Thostrup",
+    "niveau": "Alle",
+    "alder": "3-5 år",
+    "varighed": "60 min."
+},
+{
+    "id": 1, 
+    "holdnavn": "Barsels Hip Hop",
+    "tilmeldingslink": "/barsels-hip-hop",
+    "tidspunkt": "9:30",
+    "dato":"Torsdag den 25",
+    "underviser": "Anne Teresa Njust Høj",
+    "niveau": "",
+    "alder": "",
+    "varighed": "60 min."
+}
+]

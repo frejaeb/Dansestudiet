@@ -1,0 +1,25 @@
+---
+import Button from '../components/Button.astro';
+const {frontmatter} = Astro.props;
+---
+<article>
+    <h2>{frontmatter.title}</h2>
+    <p>{frontmatter.name}</p>
+    <img src={frontmatter.coverimage} alt={frontmatter.coveralt} class=""/>
+    <section>
+        <div>
+            icon
+            <p>{frontmatter.date}</p>
+        </div>
+        <div>
+            icon
+            <p>{frontmatter.time}</p>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <p>{frontmatter.beskrivelse}</p>
+        <button>læs mere</button>
+    </section>
+    <Button>SE MERE</Button>
+</article>

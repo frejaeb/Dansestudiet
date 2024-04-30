@@ -1,9 +1,67 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import Image from "astro/components/Image.astro";
+import hero from '../assets/images/hero.png';
+import heromobil from '../assets/images/heromobil.png';
+import ejer from '../assets/images/ejer.png';
+import dansestudiet from '../assets/images/dansestudiet.png';
+
+/* const workshops = await Astro.glob('./workshops/*.md');
+const sorteredeworkshops = workshops.sort((a, b) => Date.parse(b.frontmatter.dato) - Date.parse(a.frontmatter.dato));
+const udvalgteworkshops = sorteredeworkshops.slice(0, 2); */
 ---
 <MainLayout title="Titel">
-	<article>
-		<p>Index indhold</p>
+	<article id="hero" class="relative m-auto">
+		<Image src={hero} alt="" class="hidden md:block w-full "/>
+		<Image src={heromobil} alt="" class="md:hidden w-full "/>
+		<section class="absolute top-1/2 left-1/2 text-center -translate-x-2/4">
+			<h1>DANSESTUDIET</h1>
+			<p>Vi har mere end 50 danseklasser om ugen <br> for alle aldre og niveauer!</p>
+			<Button>BOOK TIME</Button>
+		</section>
+	</article>
+	<article class="max-w-6xl m-auto text-center">
+		<h2>Slå dig <span>løs</span>med vores workshops</h2>
+		<p>Kom med til vores workshop og prøv kræfter med nye danse stilarter og mød forskellige inspirerende undervisere, fra nær og fjern.</p>
+	</article>
+	<article class="max-w-6xl m-auto text-center">
+
+	</article>
+	<article class="max-w-6xl m-auto">
+		<h2 class="text-center">Hold <span>oversigt</span></h2>
+		<p class="text-center">Gå på opdagelse i vores store udvalg af mere end 50 forskellige danseklasser. Book idag og find din nye ynglindsklasse!</p>
+		<section x-data="{ alledansehold: []}" x-init="alledansehold = await (await fetch('kalender.json')).json(); alledansehold.reverse();">
+			<template x-for="dansehold in alledansehold" :key="dansehold.id">
+				<ul>
+					<li class="flex mb-4 gap-4 flex-col md:flex-row border-b-2 border-indigo-500 mx-8 md:mx-16 mt-12">
+						<div class="flex md:basis-3/4">
+							<h3 x-text="dansehold.tidspunkt" class="basis-1/3"></h3>
+							<div class="basis-2/4 mb-4">
+								<h4 x-text="dansehold.holdnavn"></h4>
+								<p x-text="dansehold.alder"><span x-text="dansehold.niveau"></span></p>
+								<p x-text="dansehold.varighed"></p>
+								<p x-text="dansehold.underviser"></p>
+							</div>
+						</div>
+						<Button x-text="dansehold.tilmeldingslink" class="md:basis-1/4">BOOK NU</Button>
+					</li>
+				</ul>
+			</template>
+		</section>
+		<Button>SE ALLE</Button>
+	</article>
+	<article class="max-w-6xl m-auto">
+		<section class="grid grid-cols-3">
+			<div class="col-span-2 text-center">
+				<h2>Dansestudiet har fået <span>nye</span>indehavere</h2>
+				<p>Den 1. Marts 2020 blev Dansestudiet Aarhus overtaget af Lisbet Kokholm & Anne-Teresa Njust Høj</p>
+			</div>
+			<Image src={ejer} alt="" class="col-span-1"/>
+		</section>
+		<section class="grid grid-cols-3">
+			<p class="col-span-2 md:order-2">Skolen blev grundlagt i 1979 af Gitte Holm under navnet Institut Gitte Holm. I 1999 overtog datteren Susanne Holm skolen, og navnet blev ændret til Dansestudiet Aarhus. <br><br> I 40 år har Dansestudiet været en vigtig del af det aarhusianske dansemiljø og det er med stor respekt og taknemmelighed at de to nye indehavere overtager og viderefører Dansestudiet Aarhus.</p>
+			<Image src={dansestudiet} alt="" class="col-span-1 md:order-1"/>
+		</section>
 	</article>
 </MainLayout>
