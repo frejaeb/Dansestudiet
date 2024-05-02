@@ -2,21 +2,21 @@
 
 // Henter parametrene fra Astro.props
 
-const { variant= "primary", size = "medium" } = Astro.props; 
+const { variant= "primary", size = "small" } = Astro.props; 
 
  
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper
 
-const buttonStyling = "font-poppins shadow-md hover:scale-110 hover:bg-pink"; 
+const buttonStyling = "font-hero text-beige-500 shadow-md hover:scale-110 px-11 py-4"; 
 
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
 
 const variantClasses = {
 
-"primary": "",
+"primary": "bg-red-500 hover:bg-red-700",
 
-"secondary": "",
+"secondary": "bg-red-300 hover:bg-red-400",
 //skal have den rigtige styling på det
 
 };
@@ -26,9 +26,9 @@ const variantClasses = {
 
 const sizeClasses = {
 
-"large": "py-5 px-10 text-2xl ",
+"large": "text-2xl ",
 
-"medium": "py-3 px-7 text-lg",
+"small": "text-lg",
 
 
 };
