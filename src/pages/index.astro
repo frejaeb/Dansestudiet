@@ -48,9 +48,9 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 2);
 				</section>
 				<hr class="border-2 border-red-500 mx-6">
 				<p class="px-6 my-6 mr-6">{workshop.frontmatter.beskrivelse}</p>
-				<div class="flex justify-center mt-4">
-					<Button>SE MERE</Button>
-				</div>
+			
+					<a href={workshop.url} class="flex justify-center mt-4"><Button>SE MERE</Button></a>
+
 			</div>
 		)}
 	</article>
