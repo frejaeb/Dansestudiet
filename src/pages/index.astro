@@ -15,10 +15,12 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 2); */
 	<article id="hero" class="relative mx-auto">
 		<Image src={hero} alt="" class="hidden md:block w-full "/>
 		<Image src={heromobil} alt="" class="md:hidden w-full "/>
-		<section class="absolute top-1/3 left-1/2 text-center -translate-x-1/2">
-			<h1 class="font-hero bold text-9xl bg-beige-500 text-red-500 px-2">DANSESTUDIET</h1>
-			<p class="font-body text-blue-400 text-3xl pt-16"><span class="bg-beige-500 px-2 py-1">Vi har mere end 50 danseklasser om ugen </span><br> <span class="bg-beige-500 px-2 py-1">for alle aldre og niveauer!</span></p>
-			<Button>BOOK TIME</Button>
+		<section class="absolute top-1/4 md:top-1/3 left-1/2 text-center -translate-x-1/2">
+			<h1 class="font-hero bold text-7xl md:text-9xl bg-beige-500 text-red-500 px-2">DANSESTUDIET</h1>
+			<p class="font-body text-blue-400 text-xl md:text-3xl pt-8 md:pt-16"><span class="bg-beige-500 px-2 py-1">Vi har mere end 50 danseklasser om ugen </span><br> <span class="bg-beige-500 px-2 py-1">for alle aldre og niveauer!</span></p>
+			<div class="mt-96 md:mt-12">
+				<Button>BOOK TIME</Button>
+			</div>
 		</section>
 	</article>
 	<article class="max-w-6xl mx-auto text-center mt-32 text-blue-400">
@@ -50,19 +52,21 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 2); */
 				</ul>
 			</template>
 		</section>
-		<Button>SE ALLE</Button>
+		<div class="flex flex-row justify-center">
+			<Button>SE ALLE</Button>
+		</div>
 	</article>
 	
 	<article class="max-w-6xl mx-auto border-2 border-red-500 text-blue-500">
 		<section class="grid md:grid-cols-3 gap-4 border-b-2 border-red-500">
 			<div class="md:col-span-2 text-center mt-8">
 				<h2 class="font-subheader text-5xl">Dansestudiet har fået <span class="italic">nye</span> indehavere</h2>
-				<p class="font-body text-2xl">Den 1. Marts 2020 blev Dansestudiet Aarhus overtaget af Lisbet Kokholm & Anne-Teresa Njust Høj</p>
+				<p class="font-body text-2xl md:mx-28 pt-8">Den 1. Marts 2020 blev Dansestudiet Aarhus overtaget af Lisbet Kokholm & Anne-Teresa Njust Høj</p>
 			</div>
 			<Image src={ejer} alt="" class="md:col-span-1 border-t-2 md:border-t-0 md:border-l-2 border-red-500"/>
 		</section>
 		<section class="grid md:grid-cols-3 gap-8">
-			<p class="md:col-span-2 md:order-2 mt-8 font-body">Skolen blev grundlagt i 1979 af Gitte Holm under navnet Institut Gitte Holm. I 1999 overtog datteren Susanne Holm skolen, og navnet blev ændret til Dansestudiet Aarhus. <br><br> I 40 år har Dansestudiet været en vigtig del af det aarhusianske dansemiljø og det er med stor respekt og taknemmelighed at de to nye indehavere overtager og viderefører Dansestudiet Aarhus.</p>
+			<p class="md:col-span-2 md:order-2 mt-8 font-body text-xl pr-10">Skolen blev grundlagt i 1979 af Gitte Holm under navnet Institut Gitte Holm. I 1999 overtog datteren Susanne Holm skolen, og navnet blev ændret til Dansestudiet Aarhus. <br><br> I 40 år har Dansestudiet været en vigtig del af det aarhusianske dansemiljø og det er med stor respekt og taknemmelighed at de to nye indehavere overtager og viderefører Dansestudiet Aarhus.</p>
 			<Image src={dansestudiet} alt="" class="md:col-span-1 md:order-1 border-t-2 md:border-t-0 md:border-r-2 border-red-500"/>
 		</section>
 	</article>
