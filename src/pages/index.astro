@@ -24,30 +24,30 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 2); */
 		</section>
 	</article>
 	<article class="max-w-6xl mx-auto text-center mt-32 text-blue-400">
-		<h2 class="font-subheader text-7xl">Slå dig <span class="italic">løs</span> med vores workshops</h2>
-		<p class="font-body text-xl md:mx-48 mt-8">Kom med til vores workshop og prøv kræfter med nye danse stilarter og mød forskellige inspirerende undervisere, fra nær og fjern.</p>
+		<h2 class="font-subheader text-5xl md:text-7xl">Slå dig <span class="italic">løs</span> med vores workshops</h2>
+		<p class="font-body md:text-xl mx-12 md:mx-48 mt-8">Kom med til vores workshop og prøv kræfter med nye danse stilarter og mød forskellige inspirerende undervisere, fra nær og fjern.</p>
 	</article>
 	<article class="max-w-6xl mx-auto text-center">
 
 	</article>
 
-	<article class="max-w-6xl mx-auto mt-32 grid">
-		<h2 class="text-center font-subheader text-blue-400 text-7xl">Hold <span class="italic">oversigt</span></h2>
-		<p class="text-center font-body text-blue-400 text-xl mt-8 mb-20 md:mx-72">Gå på opdagelse i vores store udvalg af mere end 50 forskellige danseklasser. Book idag og find din nye ynglindsklasse!</p>
+	<article class="max-w-6xl mx-10 md:mx-auto mt-32 grid">
+		<h2 class="text-center font-subheader text-blue-400 text-5xl md:text-7xl">Hold <span class="italic">oversigt</span></h2>
+		<p class="text-center font-body text-blue-400 md:text-xl mt-8 mb-12 md:mb-20 mx-8 md:mx-72">Gå på opdagelse i vores store udvalg af mere end 50 forskellige danseklasser. Book idag og find din nye ynglindsklasse!</p>
 		<section x-data="{ alledansehold: []}" x-init="alledansehold = await (await fetch('kalender.json')).json(); alledansehold.reverse();">
 			<template x-for="dansehold in alledansehold" :key="dansehold.id">
 				<ul>
 					<li class="flex mb-4 gap-4 flex-col md:flex-row border-b-2 border-red-500 mt-12">
 						<div class="flex md:basis-3/4 text-blue-500">
-							<h3 x-text="dansehold.tidspunkt" class="basis-1/3 font-body text-5xl self-center pl-10"></h3>
+							<h3 x-text="dansehold.tidspunkt" class="basis-1/3 font-body text-4xl md:text-5xl self-center pl-10"></h3>
 							<div class="basis-2/4 mb-4">
-								<h4 class="font-display bold text-2xl" x-text="dansehold.holdnavn"></h4>
-								<p class="font-body text-xl" x-text="dansehold.alder"><span x-text="dansehold.niveau"></span></p>
-								<p class="font-body text-xl" x-text="dansehold.varighed"></p>
-								<p class="font-body text-xl" x-text="dansehold.underviser"></p>
+								<h4 class="font-display bold text-xl md:text-2xl" x-text="dansehold.holdnavn"></h4>
+								<p class="font-body md:text-xl" x-text="dansehold.alder"><span x-text="dansehold.niveau"></span></p>
+								<p class="font-body md:text-xl" x-text="dansehold.varighed"></p>
+								<p class="font-body md:text-xl" x-text="dansehold.underviser"></p>
 							</div>
 						</div>
-						<Button x-text="dansehold.tilmeldingslink" class="md:basis-1/4">BOOK NU</Button>
+						<Button x-text="dansehold.tilmeldingslink" variant="secondary" size="large" class="md:basis-1/4">BOOK NU</Button>
 					</li>
 				</ul>
 			</template>
@@ -57,16 +57,16 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 2); */
 		</div>
 	</article>
 	
-	<article class="max-w-6xl mx-auto border-2 border-red-500 text-blue-500">
+	<article class="max-w-6xl mx-10 md:mx-auto border-2 border-red-500 text-blue-500">
 		<section class="grid md:grid-cols-3 gap-4 border-b-2 border-red-500">
 			<div class="md:col-span-2 text-center mt-8">
-				<h2 class="font-subheader text-5xl">Dansestudiet har fået <span class="italic">nye</span> indehavere</h2>
-				<p class="font-body text-2xl md:mx-28 pt-8">Den 1. Marts 2020 blev Dansestudiet Aarhus overtaget af Lisbet Kokholm & Anne-Teresa Njust Høj</p>
+				<h2 class="font-subheader mx-2 md:mx-0 text-4xl md:text-5xl">Dansestudiet har fået <span class="italic">nye</span> indehavere</h2>
+				<p class="font-body md:text-2xl mx-10 md:mx-28 pt-8">Den 1. Marts 2020 blev Dansestudiet Aarhus overtaget af Lisbet Kokholm & Anne-Teresa Njust Høj</p>
 			</div>
 			<Image src={ejer} alt="" class="md:col-span-1 border-t-2 md:border-t-0 md:border-l-2 border-red-500"/>
 		</section>
 		<section class="grid md:grid-cols-3 gap-8">
-			<p class="md:col-span-2 md:order-2 mt-8 font-body text-xl pr-10">Skolen blev grundlagt i 1979 af Gitte Holm under navnet Institut Gitte Holm. I 1999 overtog datteren Susanne Holm skolen, og navnet blev ændret til Dansestudiet Aarhus. <br><br> I 40 år har Dansestudiet været en vigtig del af det aarhusianske dansemiljø og det er med stor respekt og taknemmelighed at de to nye indehavere overtager og viderefører Dansestudiet Aarhus.</p>
+			<p class="md:col-span-2 md:order-2 mx-6 md:mx-0 mt-8 font-body md:text-xl pr-10">Skolen blev grundlagt i 1979 af Gitte Holm under navnet Institut Gitte Holm. I 1999 overtog datteren Susanne Holm skolen, og navnet blev ændret til Dansestudiet Aarhus. <br><br> I 40 år har Dansestudiet været en vigtig del af det aarhusianske dansemiljø og det er med stor respekt og taknemmelighed at de to nye indehavere overtager og viderefører Dansestudiet Aarhus.</p>
 			<Image src={dansestudiet} alt="" class="md:col-span-1 md:order-1 border-t-2 md:border-t-0 md:border-r-2 border-red-500"/>
 		</section>
 	</article>
