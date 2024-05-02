@@ -1,22 +1,25 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
 import Image from "astro/components/Image.astro";
 import hero from '../assets/images/hero.png';
 import heromobil from '../assets/images/heromobil.png';
 import ejer from '../assets/images/ejer.png';
 import dansestudiet from '../assets/images/dansestudiet.png';
-
-/* const workshops = await Astro.glob('./workshops/*.md');
+import kalender from '../assets/images/kalender.svg';
+import ur from '../assets/images/ur.svg';
+const {frontmatter} = Astro.props;
+const workshops = await Astro.glob('./workshops/*.md');
 const sorteredeworkshops = workshops.sort((a, b) => Date.parse(b.frontmatter.dato) - Date.parse(a.frontmatter.dato));
-const udvalgteworkshops = sorteredeworkshops.slice(0, 2); */
+const udvalgteworkshops = sorteredeworkshops.slice(0, 2);
 ---
 <MainLayout title="Titel">
 	<article id="hero" class="relative mx-auto">
 		<Image src={hero} alt="" class="hidden md:block w-full "/>
 		<Image src={heromobil} alt="" class="md:hidden w-full "/>
 		<section class="absolute top-1/4 md:top-1/3 left-1/2 text-center -translate-x-1/2">
-			<h1 class="font-hero bold text-6xl md:text-9xl bg-beige-500 text-red-500 px-2">DANSESTUDIET</h1>
+			<h1 class="font-hero font-bold text-6xl md:text-9xl bg-beige-500 text-red-500 px-2">DANSESTUDIET</h1>
 			<p class="font-body text-blue-400 text-xl md:text-3xl pt-8 md:pt-16"><span class="bg-beige-500 px-2 py-1">Vi har mere end 50 danseklasser om ugen </span><br> <span class="bg-beige-500 px-2 py-1">for alle aldre og niveauer!</span></p>
 			<div class="mt-96 md:mt-12">
 				<Button variant="primary" size="large">BOOK TIME</Button>
@@ -27,8 +30,29 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 2); */
 		<h2 class="font-subheader text-5xl md:text-7xl">Slå dig <span class="italic">løs</span> med vores workshops</h2>
 		<p class="font-body md:text-xl mx-12 md:mx-48 mt-8">Kom med til vores workshop og prøv kræfter med nye danse stilarter og mød forskellige inspirerende undervisere, fra nær og fjern.</p>
 	</article>
-	<article class="max-w-6xl mx-auto text-center">
-
+	<article class="max-w-6xl mx-auto text-blue-500 grid grid-cols-2 gap-8 w-3/5 mt-16">
+		{udvalgteworkshops.map(workshop => 
+			<div class="border-2 border-red-500 font-body">
+				<h2 class="font-subheader text-4xl px-6 mt-6 mb-2">{workshop.frontmatter.title}</h2>
+				<p class="text-xl px-6 mb-6">{workshop.frontmatter.name}</p>
+				<img src={workshop.frontmatter.coverimage} alt={workshop.frontmatter.coveralt} class="w-full"/>
+				<section class="flex ml-6 my-6">
+					<div class="flex gap-4">
+						<Image src={kalender} alt="" class="" width="28"/>
+						<p class="italic">{workshop.frontmatter.date}</p>
+					</div>
+					<div class="flex gap-4 ml-12">
+						<Image src={ur} alt="" class="" width="28"/>
+						<p class="italic">{workshop.frontmatter.time}</p>
+					</div>
+				</section>
+				<hr class="border-2 border-red-500 mx-6">
+				<p class="px-6 my-6 mr-6">{workshop.frontmatter.beskrivelse}</p>
+				<div class="flex justify-center mt-4">
+					<Button>SE MERE</Button>
+				</div>
+			</div>
+		)}
 	</article>
 
 	<article class="max-w-6xl mx-10 md:mx-auto mt-32 grid">
@@ -47,9 +71,9 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 2); */
 								<p class="font-body md:text-xl" x-text="dansehold.underviser"></p>
 							</div>
 						</div>
-						<div>
+						<div class="place-self-end mr-6 md:mr-0">
 						<Button variant="secondary" size="large" class="md:basis-1/4">BOOK NU</Button>
-					</div>
+						</div>
 					</li>
 				</ul>
 			</template>

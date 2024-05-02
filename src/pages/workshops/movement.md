@@ -1,10 +1,12 @@
 ---
 layout: ../../layouts/WorkshopLayout.astro
 title: "Movement"
-dato: "2024-04-21"
-coverimage: "/nyhed_cover.jpg"
-coveralt: "reduce reuse recycle"
-kortversion: "Kom med til en spændende workshop med Timothy, der nu er aktuel i forestillingen “Askepot the musical”. Workshoppens omdrejningspunkt er “Morph Movement” der sammensmelter mange stilarter og giver ..."
+name: "med Timothy De Mesa Højgaard"
+date: "Søndag d. 21 april"
+time: "kl. 10-12"
+coverimage: "/timothy.png"
+coveralt: "Timothy De Mesa Højgaard"
+beskrivelse: "Kom med til en spændende workshop med Timothy, der nu er aktuel i forestillingen “Askepot the musical”. Workshoppens omdrejningspunkt er “Morph Movement” der sammensmelter mange stilarter og giver ..."
 ---
 ## Movement
 *med Timothy De Mesa Højgaard*
@@ -21,7 +23,7 @@ Workshoppens omdrejningspunkt er “Morph  Movement” – at sammensmelte mange
 - **Tidspunkt:** kl. 10-12
 - **Pris:** 210 kr.
 
-![Marja blev overrasket af kondomer, da hun rodede rundt i glemmekassen](/overrasket.jpg)
+![Timothy De Mesa Højgaard](/timothy.png)
 
 ### Om *underviseren*
 Timothy  begyndte som gymnast og uddannede sig senere som danser i København. Han  har medvirket i flere tv-produktioner som “Vild med dans”, “X Factor”,  “Danmark har talent” og har også optrådt ved “Copenhagen Fashion Week”.  
