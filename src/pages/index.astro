@@ -55,7 +55,7 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 2);
 
 	<article class="max-w-6xl mx-10 md:mx-auto mt-48 grid">
 		<h2 class="text-center font-subheader text-blue-400 text-5xl md:text-7xl">Hold <span class="italic">oversigt</span></h2>
-		<p class="text-center font-body text-blue-400 md:text-xl mt-8 mb-12 md:mb-20 mx-8 md:mx-72">Gå på opdagelse i vores store udvalg af mere end 50 forskellige danseklasser. Book idag og find din nye ynglindsklasse!</p>
+		<p class="text-center font-body text-blue-400 md:text-xl mt-8 mb-12 md:mb-8 mx-8 md:mx-72">Gå på opdagelse i vores store udvalg af mere end 50 forskellige danseklasser. Book idag og find din nye ynglindsklasse!</p>
 		<section x-data="{ alledansehold: []}" x-init="alledansehold = await (await fetch('kalender.json')).json(); alledansehold.reverse();">
 			<template x-for="dansehold in alledansehold" :key="dansehold.id">
 				<ul>
