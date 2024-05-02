@@ -30,7 +30,7 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 2);
 		<h2 class="font-subheader text-5xl md:text-7xl">Slå dig <span class="italic">løs</span> med vores workshops</h2>
 		<p class="font-body md:text-xl mx-12 md:mx-48 mt-8">Kom med til vores workshop og prøv kræfter med nye danse stilarter og mød forskellige inspirerende undervisere, fra nær og fjern.</p>
 	</article>
-	<article class="max-w-6xl mx-auto text-blue-500 grid grid-cols-2 gap-8 w-3/5 mt-16">
+	<article class="max-w-6xl mx-10 md:mx-auto text-blue-500 grid md:grid-cols-2 gap-8 md:w-3/5 mt-16 ">
 		{udvalgteworkshops.map(workshop => 
 			<div class="border-2 border-red-500 font-body">
 				<h2 class="font-subheader text-4xl px-6 mt-6 mb-2">{workshop.frontmatter.title}</h2>
@@ -41,7 +41,7 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 2);
 						<Image src={kalender} alt="" class="" width="28"/>
 						<p class="italic">{workshop.frontmatter.date}</p>
 					</div>
-					<div class="flex gap-4 ml-12">
+					<div class="flex gap-4 ml-6 md:ml-12">
 						<Image src={ur} alt="" class="" width="28"/>
 						<p class="italic">{workshop.frontmatter.time}</p>
 					</div>
