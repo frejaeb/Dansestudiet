@@ -15,6 +15,8 @@ module.exports = {
                 'body':['"kepler-std"', 'serif'],
                 'display':['"kepler-std-display"', 'serif'],
                 'subheader':['"kepler-std-subhead"', 'serif'],
+                'hero':['"DansestudietDisplay1"', 'sans-serif'],
+                'knap':['"Dansestudiet Simple', 'sans-serif'],
                 },
             colors: {
                 'grey': {
